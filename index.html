@@ -1,0 +1,131 @@
+<html>
+	<head>
+		
+		<title>
+			Comparison Sorting Visualization
+		</title>
+		
+		<!-- css sheet for how the page is laid out -->
+		
+		<link rel="stylesheet" href="visualizationPageStyle.css">
+		<link href="first.css" rel="stylesheet" type="text/css" />
+
+	<!-- jqueury stuff.  Only used for the animation speed slider. -->
+		<link rel="stylesheet" href="jquery-ui-1.8.11.custom.css">
+		<script src="jquery-1.5.2.min.js"></script>
+		<script src="jquery-ui-1.8.11.custom.min.js"></script>
+				
+		<!-- Javascript for the actual visualization code -->
+		<script type = "application/javascript" src = "CustomEvents.js"> </script>
+		<script type = "application/javascript" src = "UndoFunctions.js"> </script>
+		<script type = "application/javascript" src = "AnimatedObject.js"> </script>
+		<script type = "application/javascript" src = "AnimatedLabel.js"> </script>
+		<script type = "application/javascript" src = "AnimatedCircle.js"> </script>
+		<script type = "application/javascript" src = "AnimatedRectangle.js"> </script>
+		<script type = "application/javascript" src = "AnimatedLinkedList.js"> </script>
+		<script type = "application/javascript" src = "HighlightCircle.js"> </script>
+		<script type = "application/javascript" src = "Line.js"> </script>
+		<script type = "application/javascript" src = "ObjectManager.js"> </script>
+		<script type = "application/javascript" src = "AnimationMain.js"> </script>
+		<script type = "application/javascript" src = "Algorithm.js"> </script>
+		<script type = "application/javascript" src = "ComparisonSort.js"> </script> 
+				
+			
+	 </head> 
+	
+	<body onload="init();" class="VisualizationMainPage">
+	<div id="topnav">
+		<div id="topnav">
+		<div id="topnav-inline">
+		</div>
+	</div>
+	<div id="wrapper">
+		<div id="header" class="center"> 
+			<img src="logo.png" alt="d_and_s">
+		</div> 
+		<div id="topmenu">
+			<ul class="menu">
+				<li ><a href="index.html"><!--Home--></a></li>
+				<li class="dropdown"><a href="#" class="dropbtn"><!--Linear--></a>
+					<div class="dropdown-content">
+						<a href="#"><!--Linked List--></a>
+						<a href="QueueArray.html"><!--Queues--></a>
+						<a href="StackArray.html"><!--Stacks--></a>
+						<a href="frasystem.php"><!--Arrays--></a>
+					</div>
+				</li>
+				<li class="dropdown"><a href="#" class="dropbtn"><!--Non Linear--></a>
+					<div class="dropdown-content">
+						<a href="#"><!--Trees--></a>
+						<a href="#"><!--Graphs--></a>
+					</div>
+				</li>
+				<li class="dropdown"><a href="#" class="dropbtn"><!--Sorting Algorithms--></a>
+					<div class="dropdown-content">
+						<a href="bubblesort.html"><!--Bubble Sort--></a>
+						<a href="quicksort.html"><!--Quick Sort--></a>
+						<a href="mergesort.html"><!--Merge Sort--></a>
+						<a href="insertionsort.html"><!--Insertion Sort--></a>
+						<a href="selectionsort.html"><!--Selection Sort--></a>
+						</div>
+				</li>
+				<li class="dropdown"><a href="#" class="dropbtn">Visualization</a>
+					<div class="dropdown-content">
+						<a href="index.html">Comparition Sorting</a>
+						<a href="StackArray.html"><!--Stack Implementation--></a>
+						<a href="QueueArray.html"><!--Queue Implementation--></a>
+						<a href="RecFact.html"><!--Recursion Implementation--></a>
+					</div>
+				</li>
+				<li class="dropdown"><a href="#" class="dropbtn"><!--Searching--></a>
+					<div class="dropdown-content">
+						<a href="linearsearch.php"><!--Linear Search--></a>
+						<a href="binarysearch.php"><!--Binary Search--></a>
+						<!--<a href="#">Interpolation Search</a>-->
+						<!--<a href="#">Hash Table</a>-->
+					</div>
+				</li>
+				<li class="dropdown"><a href="pasc.php" class="dropbtn"><!--Pascal's Triangle-->
+				</a>
+				</li>
+				<li class="dropdown"><a href="frasystem.php" class="dropbtn"><!--Fraud System--></a>
+				
+				</li>
+			</ul>	
+		
+		</div>
+		<br clear="all"/>
+		<div >
+		<img style="position:absolute; z-index:2;" width="1000" src="image1.png"/>
+		</div>
+		<div class="divider"></div>
+
+			<div = id = "mainContent"> 
+				
+				<div id = "algoControlSection">
+					<!-- Table for buttons to control specific animation (insert/find/etc) -->
+					<!-- (filled in by javascript code specific to the animtion) -->
+					<table id="AlgorithmSpecificControls"> </table> 
+				</div>
+				
+					<!-- Drawing canvas where all animation is done.  Note:  can be resized in code -->
+									
+				<canvas id="canvas" width="1000" height="450"></canvas>
+				
+				<div id = "generalAnimationControlSection">
+					<!-- Table for buttons to control general animation (play/pause/undo/etc) ->
+					<!-- (filled in by javascript code, specifically AnimationMain.js)  -->
+
+					<table id="GeneralAnimationControls">  </table>		
+				</div>
+				
+			</div> <!-- mainContent -->
+			
+			<div id="footer">  
+				<p align="center">&copy NSIMBI IVAN FRANK</p>
+			</div>
+
+		</div><!-- container -->
+	</div>		
+	</body>
+</html>
