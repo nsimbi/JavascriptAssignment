@@ -13,7 +13,7 @@ It  contains  javascript,html and css  code  for  the visualisation of  some sor
  Shareholders will be able to view their;
  * Profile
  * Dividends
- * Previuos subscriptions
+ * Previous subscriptions
  * Number of shares
  among others.
 
